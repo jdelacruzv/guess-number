@@ -1,13 +1,15 @@
 import random
 
 
-def guess_number(number):
+def title():
 	print("==========================")
 	print(" ¡Bienvenido(a) al Juego! ")
 	print("==========================")
 	print("El objetivo es adivinar el número generado por la computadora.")
 	print()
 
+
+def guess_number(number):
 	random_number = random.randint(1, number)
 	user_prediction = 0
 	while user_prediction != random_number:
@@ -21,4 +23,9 @@ def guess_number(number):
 	print()
 
 
-guess_number(10)
+def main():
+	title()
+	guess_number(10)
+
+
+main()
