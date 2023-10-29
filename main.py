@@ -1,15 +1,17 @@
 import random
 
 
-def title():
-	print("==========================")
-	print(" ¡Bienvenido(a) al Juego! ")
-	print("==========================")
-	print("El objetivo es adivinar el número generado por la computadora.")
-	print()
+def title_bar():
+	line = "=" * 60 
+	message = "¡Bienvenido(a) al Juego!"
+	print(line)
+	print("{:^60}".format(message))
+	print(line)
+	print("El objetivo es adivinar el número generado por el ordenador.\n")
 
 
-def guess_number(number):
+def guess_number():
+	number = int(input("Ingrese el rango final del número: "))
 	random_number = random.randint(1, number)
 	user_prediction = 0
 	while user_prediction != random_number:
@@ -18,14 +20,12 @@ def guess_number(number):
 			print("Intenta otra vez. El número es muy bajo")
 		elif user_prediction > random_number:
 			print("Intenta otra vez. El número es muy alto")
-	print()
-	print(f"¡Felicitaciones! Adivinastes el número {random_number} correctamente.'")
-	print()
+	print(f"\n¡Felicitaciones! Adivinastes el número {random_number} correctamente.\n")
 
 
 def main():
-	title()
-	guess_number(10)
+	title_bar()
+	guess_number()
 
 
 main()
