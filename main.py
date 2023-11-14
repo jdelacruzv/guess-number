@@ -9,12 +9,12 @@ def title_bar():
 	print("{:^60}".format(message))
 	print(line)
 	print("El objetivo es adivinar el número generado por el ordenador.")
-	print("Para terminar el programa digite salir\n")
+	print("Para terminar el programa digite salir.\n")
 
 
 def guess_number():
 	while True:
-		number = input("Ingrese rango final del número: ")	
+		number = input("Digite un número (rango final): ")	
 		if number == 'salir':
 			break
 		try:
