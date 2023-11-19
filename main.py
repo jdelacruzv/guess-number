@@ -13,6 +13,7 @@ def title_bar():
 
 
 def guess_number():
+	user_name = input("Ingrese su nombre: ")
 	while True:
 		number = input("Digite un número (rango final): ")	
 		if number == 'salir':
@@ -32,7 +33,7 @@ def guess_number():
 						print("Intenta otra vez, el número es muy alto")
 				except:
 					print('Entrada inválida...')
-			print(f"\n¡Felicitaciones! Adivinastes el número {random_number} correctamente.\n")
+			print(f"\n¡Felicitaciones {user_name}! Adivinastes el número {random_number} correctamente.\n")
 			break
 		except:
 			print('Entrada inválida...')
